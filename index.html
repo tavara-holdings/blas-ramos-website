@@ -2781,7 +2781,7 @@ function filterDoor(filter, clickedBtn) {
     <p class="hero-subtitle">Fired 5 times. Managed out 5 more. Broke and rebuilding at mid-life. I didn't just study transformation — I survived it. Now I build it. OPTIMA PRAXIS is the practice. SOLOMON TEKNIKA is the delivery engine. TAVARA HOLDINGS is the proof.</p>
     <div class="hero-actions">
       <a href="#stories" class="btn-primary">
-        <span>Hear the Story</span>
+        <span>Read the Diary</span>
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <a href="#connect" class="btn-ghost">Book a Session &rarr;</a>
@@ -3259,6 +3259,33 @@ function filterDoor(filter, clickedBtn) {
   </div>
 
   </div><!-- /.stories-inner -->
+
+  <!-- DIARY SUBSCRIBE -->
+  <div style="background:#0B1730;padding:3.5rem 4rem;text-align:center;">
+    <p style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:0.5rem;">Get the next entry in your inbox.</p>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.45);margin-bottom:2rem;">Raw. Unfiltered. No newsletter fluff. Just the next chapter of building TAVARA HOLDINGS from broke to builder.</p>
+    <form onsubmit="handleDiarySubscribe(event)" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto;">
+      <input type="email" name="diary_email" placeholder="your@email.com" required
+        style="flex:1;min-width:220px;padding:0.9rem 1.25rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;">
+      <button type="submit"
+        style="padding:0.9rem 2rem;background:#E52235;color:#fff;border:none;font-family:'DM Sans',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;">
+        Follow the Story
+      </button>
+    </form>
+    <p id="diary-subscribe-msg" style="margin-top:1rem;font-size:0.85rem;color:#E52235;display:none;">You're in. Next entry lands in your inbox.</p>
+  </div>
+  <script>
+  function handleDiarySubscribe(e) {
+    e.preventDefault();
+    var email = e.target.querySelector('[name="diary_email"]').value.trim();
+    if (!email) return;
+    fetch('mailto:blas@tavaraholdings.com');
+    window.location.href = 'mailto:blas@tavaraholdings.com?subject=Diary Subscribe&body=Please add me to The Diary: ' + encodeURIComponent(email);
+    document.getElementById('diary-subscribe-msg').style.display = 'block';
+    e.target.reset();
+  }
+  </script>
+
 </section>
 
 <!-- SAAS PLATFORMS -->
@@ -3294,7 +3321,7 @@ function filterDoor(filter, clickedBtn) {
         </div>
         <div class="plat-tag">Healthcare · AI</div>
         <div class="plat-name">HANAPDOK</div>
-        <p class="plat-desc">Find the right doctor, fast. AI-powered health search built for every Filipino.</p>
+        <p class="plat-desc">Your family needs a doctor. HANAPDOK finds the right one — from 408,000 providers across 70 countries — in seconds.</p>
         <div class="plat-url">hanapdok.com →</div>
       </a>
 
@@ -3305,7 +3332,7 @@ function filterDoor(filter, clickedBtn) {
         </div>
         <div class="plat-tag">AI Governance · Compliance</div>
         <div class="plat-name">AIRA</div>
-        <p class="plat-desc">AI readiness across 27 jurisdictions. Board-grade compliance for the AI era.</p>
+        <p class="plat-desc">Your board is asking about AI risk. AIRA gives you the answers — board-grade AI readiness across 27 jurisdictions.</p>
         <div class="plat-url">airagov.com →</div>
       </a>
 
@@ -3316,7 +3343,7 @@ function filterDoor(filter, clickedBtn) {
         </div>
         <div class="plat-tag">Community · LGU</div>
         <div class="plat-name">KOMUNITI</div>
-        <p class="plat-desc">Community platform for LGUs, associations, and organizations across the Philippines.</p>
+        <p class="plat-desc">Running an HOA, LGU, or association on group chats and spreadsheets? KOMUNITI was built to replace all of that.</p>
         <div class="plat-url">komuniti.cloud →</div>
       </a>
 
@@ -3327,24 +3354,20 @@ function filterDoor(filter, clickedBtn) {
         </div>
         <div class="plat-tag">Operations · AI</div>
         <div class="plat-name">BLUE WHALE</div>
-        <p class="plat-desc">AI-powered ops for healthcare and enterprise. Built for scale, compliance, and speed.</p>
+        <p class="plat-desc">Healthcare and enterprise operations are complex. BLUE WHALE runs the monitoring, compliance, and speed — so your team doesn't have to.</p>
         <div class="plat-url">bluewhaleops.com →</div>
       </a>
 
       <!-- 8 CYCLES -->
-      <a href="https://8cycles.health" target="_blank" rel="noopener" class="plat-card reveal" style="transition-delay:0.5s;">
+      <a href="https://8cycles.health" target="_blank" rel="noopener" class="plat-card reveal" style="transition-delay:0.5s;border-top:2px solid #E52235;">
         <div class="plat-logo">
-          <div class="plat-logo-fallback">
-            <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="14" stroke="#E52235" stroke-width="2.5"/>
-              <path d="M20 10 C24 10 28 14 28 20 C28 26 24 30 20 30 C16 30 12 26 12 20 C12 14 16 10 20 10Z" stroke="#E52235" stroke-width="1.5" fill="none"/>
-              <circle cx="20" cy="20" r="4" fill="#E52235"/>
-            </svg>
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,#0B1730,#E52235);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+            <span style="color:#fff;font-weight:800;font-size:1.1rem;font-family:'Playfair Display',serif;">8</span>
           </div>
         </div>
         <div class="plat-tag">Mental Wellness · AI</div>
         <div class="plat-name">8 CYCLES</div>
-        <p class="plat-desc">AI-powered mental wellness companion. For anyone who has ever felt stuck, lost, or not enough.</p>
+        <p class="plat-desc">Feeling stuck, lost, or not enough? You are not broken. You are in a cycle. AINI meets you where you are.</p>
         <div class="plat-url">8cycles.health →</div>
       </a>
 
@@ -3361,7 +3384,7 @@ function filterDoor(filter, clickedBtn) {
         </div>
         <div class="plat-tag">ERP · SME · BIR</div>
         <div class="plat-name">TAVARA ERP</div>
-        <p class="plat-desc">Full-stack ERP for Philippine SMEs. BIR compliance, payroll, POS, inventory — built for ₱10M–₱500M businesses.</p>
+        <p class="plat-desc">Your SME needs payroll, BIR compliance, POS, and inventory — all in one system built for Philippine businesses.</p>
         <div class="plat-url">tavaraerp.com →</div>
       </a>
 
