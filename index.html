@@ -2773,7 +2773,7 @@ function filterDoor(filter, clickedBtn) {
     <div class="hero-dot"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-tag">8 Reinventions. Still Rising.</div>
+    <div class="hero-tag">Fired 5 Times. Managed Out 5 More. Still Building.</div>
     <h1 class="hero-title">
       <span class="line"><span class="line-inner">Breaking Limits</span></span>
       <span class="line"><span class="line-inner">Achieves <em>Success</em></span></span>
@@ -3229,29 +3229,29 @@ function filterDoor(filter, clickedBtn) {
       </div>
     </div>
 
-    <!-- Entry 011 -->
-    <div style="cursor:pointer" onclick="openStory('the-driver')" class="story-card" data-category="personal">
-      <div class="story-card-inner">
-        <div class="diary-meta">
-          <span class="diary-number">Entry 011</span>
-          <span class="story-card-tag">Personal</span>
-        </div>
-        <h3 class="story-card-title">THE DRIVER &rarr; THE MANAGER &rarr; THE DIRECTOR &rarr; THE FOUNDER</h3>
-        <p class="diary-opener">"Fired 5 times. Managed out 5 more. That is a perfect 10 if you are keeping score. For a long time, I was."</p>
-        <span class="story-card-arrow">&rarr; Continue reading</span>
-      </div>
-    </div>
-
     <!-- Entry 010 -->
     <div style="cursor:pointer" onclick="openStory('in-and-out')" class="story-card" data-category="personal">
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 010</span>
-                    <span class="story-card-tag">Personal</span>
+          <span class="story-card-tag">Personal</span>
         </div>
         <h3 class="story-card-title">IN &amp; OUT</h3>
         <p class="diary-opener">"I thought I'd stay until retirement. The reorg had other plans."</p>
         <span class="story-card-arrow">→ Continue reading</span>
+      </div>
+    </div>
+
+    <!-- Entry 011 — LATEST -->
+    <div style="cursor:pointer" onclick="openStory('the-driver')" class="story-card" data-category="personal" style="border-top:2px solid #E52235;">
+      <div class="story-card-inner">
+        <div class="diary-meta">
+          <span class="diary-number">Entry 011</span>
+          <span class="story-card-tag" style="background:#E52235;color:#fff;padding:0.2rem 0.6rem;border-radius:4px;">Latest</span>
+        </div>
+        <h3 class="story-card-title">THE DRIVER &rarr; THE MANAGER &rarr; THE DIRECTOR &rarr; THE FOUNDER</h3>
+        <p class="diary-opener">"Fired 5 times. Managed out 5 more. That is a perfect 10 if you are keeping score. For a long time, I was."</p>
+        <span class="story-card-arrow">&rarr; Continue reading</span>
       </div>
     </div>
 
@@ -3264,27 +3264,17 @@ function filterDoor(filter, clickedBtn) {
   <div style="background:#0B1730;padding:3.5rem 4rem;text-align:center;">
     <p style="font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:0.5rem;">Get the next entry in your inbox.</p>
     <p style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:rgba(255,255,255,0.45);margin-bottom:2rem;">Raw. Unfiltered. No newsletter fluff. Just the next chapter of building TAVARA HOLDINGS from broke to builder.</p>
-    <form onsubmit="handleDiarySubscribe(event)" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto;">
-      <input type="email" name="diary_email" placeholder="your@email.com" required
+    <form action="https://formspree.io/f/blasramos-diary" method="POST" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto;">
+      <input type="email" name="email" placeholder="your@email.com" required
         style="flex:1;min-width:220px;padding:0.9rem 1.25rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;">
+      <input type="hidden" name="_subject" value="New Diary Subscriber">
+      <input type="hidden" name="_next" value="https://blasramos.com">
       <button type="submit"
         style="padding:0.9rem 2rem;background:#E52235;color:#fff;border:none;font-family:'DM Sans',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;">
         Follow the Story
       </button>
     </form>
-    <p id="diary-subscribe-msg" style="margin-top:1rem;font-size:0.85rem;color:#E52235;display:none;">You're in. Next entry lands in your inbox.</p>
-  </div>
-  <script>
-  function handleDiarySubscribe(e) {
-    e.preventDefault();
-    var email = e.target.querySelector('[name="diary_email"]').value.trim();
-    if (!email) return;
-    fetch('mailto:blas@tavaraholdings.com');
-    window.location.href = 'mailto:blas@tavaraholdings.com?subject=Diary Subscribe&body=Please add me to The Diary: ' + encodeURIComponent(email);
-    document.getElementById('diary-subscribe-msg').style.display = 'block';
-    e.target.reset();
-  }
-  </script>
+    <p style="margin-top:1rem;font-size:0.8rem;color:rgba(255,255,255,0.3);font-family:'DM Sans',sans-serif;">No spam. Just the next chapter.</p>
 
 </section>
 
@@ -3389,6 +3379,12 @@ function filterDoor(filter, clickedBtn) {
       </a>
 
     </div>
+
+    <div style="text-align:center;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.08);">
+      <p style="color:rgba(255,255,255,0.5);font-family:'DM Sans',sans-serif;font-size:0.95rem;margin-bottom:1rem;">Building something similar? Let's talk.</p>
+      <a href="#connect" style="color:#E52235;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;">Work with Blas &rarr;</a>
+    </div>
+
   </div>
 </section>
 
