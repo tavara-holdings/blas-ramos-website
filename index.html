@@ -2675,6 +2675,11 @@ function handleContactForm(e) {
     return;
   }
 
+  // No backend yet — hand off to the visitor's own mail app so no message is lost
+  var subject = encodeURIComponent('Inquiry from blasramos.com - ' + name);
+  var body = encodeURIComponent(message + '\n\nFrom: ' + name + '\nEmail: ' + email);
+  window.location.href = 'mailto:care@tavaraholdings.com?subject=' + subject + '&body=' + body;
+
   form.style.display = 'none';
   document.getElementById('contact-success').style.display = 'block';
 }
@@ -3823,8 +3828,8 @@ function filterDoor(filter, clickedBtn) {
     </div>
 
       <div id="contact-success" style="display:none; margin-top:2.5rem; padding:2rem; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); text-align:center;">
-        <p style="color:#fff; font-family:'Playfair Display',serif; font-size:1.2rem; font-style:italic; margin-bottom:0.75rem;">Message Received. Thank You!</p>
-        <p style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Blas will respond personally within 24 hours.</p>
+        <p style="color:#fff; font-family:'Playfair Display',serif; font-size:1.2rem; font-style:italic; margin-bottom:0.75rem;">Almost There. Your Mail App Is Opening.</p>
+        <p style="color:rgba(255,255,255,0.5); font-size:0.9rem;">Press send in your email app to deliver your message. If it did not open, email <a href="mailto:care@tavaraholdings.com" style="color:var(--red-soft);">care@tavaraholdings.com</a> directly. Blas responds personally within 24 hours.</p>
         <a href="#home" style="display:inline-block;margin-top:1.25rem;font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--red-soft);text-decoration:none;">&#8592; Back to top</a>
       </div>
       <div id="contact-error" style="display:none; margin-top:1.5rem;padding:1rem 1.5rem;background:rgba(229,34,53,0.1);border:1px solid rgba(229,34,53,0.3);color:#FF6B7A;font-size:0.88rem;text-align:center;">
