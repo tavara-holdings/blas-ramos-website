@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blas Ramos — Founder, TAVARA HOLDINGS · OPTIMA PRAXIS · Speaker · Transformation Partner</title>
+  <title>Blas Ramos - Founder, TAVARA HOLDINGS · OPTIMA PRAXIS · Speaker · Transformation Partner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap">
@@ -133,20 +133,20 @@
     pointer-events: none;
   }
 
-  /* CSS failsafe — hides loader after 3s even if JS fails */
+  /* CSS failsafe - hides loader after 3s even if JS fails */
   @keyframes forceHide {
     0%,80% { opacity:1; visibility:visible; }
     100%   { opacity:0; visibility:hidden; pointer-events:none; }
   }
   .loader { animation: forceHide 3s ease forwards; }
   .loader.done { animation: none; opacity:0; visibility:hidden; pointer-events:none; }
-  /* Container — explicit 220×220 so % heights resolve correctly in all browsers */
+  /* Container - explicit 220×220 so % heights resolve correctly in all browsers */
   .loader-hg {
     position: relative;
     width: 220px;
     height: 220px;
   }
-  /* Ghost — faint outline of the full logo always showing */
+  /* Ghost - faint outline of the full logo always showing */
   .loader-ghost {
     position: absolute;
     inset: 0;
@@ -157,7 +157,7 @@
     background-repeat: no-repeat;
     opacity: 0.08;
   }
-  /* TOP half wrapper — shrinks from 50% → 0 (draining) */
+  /* TOP half wrapper - shrinks from 50% → 0 (draining) */
   .loader-top-wrap {
     position: absolute;
     top: 0; left: 0;
@@ -167,7 +167,7 @@
     animation: lgTopDrain 2.8s ease-in-out infinite;
     -webkit-animation: lgTopDrain 2.8s ease-in-out infinite;
   }
-  /* TOP logo tile — full 220×220, anchored to top */
+  /* TOP logo tile - full 220×220, anchored to top */
   .loader-top-img {
     width: 220px;
     height: 220px;
@@ -175,7 +175,7 @@
     background-position: center top;
     background-repeat: no-repeat;
   }
-  /* BOTTOM half wrapper — grows from 0 → 50% (filling) */
+  /* BOTTOM half wrapper - grows from 0 → 50% (filling) */
   .loader-bot-wrap {
     position: absolute;
     bottom: 0; left: 0;
@@ -185,7 +185,7 @@
     animation: lgBotFill 2.8s ease-in-out infinite;
     -webkit-animation: lgBotFill 2.8s ease-in-out infinite;
   }
-  /* BOTTOM logo tile — full 220×220, anchored to bottom */
+  /* BOTTOM logo tile - full 220×220, anchored to bottom */
   .loader-bot-img {
     position: absolute;
     bottom: 0; left: 0;
@@ -2504,7 +2504,7 @@
   height: auto;
   border-radius: 8px;
 }
-/* Nanay poem inside overlay — override body p color */
+/* Nanay poem inside overlay - override body p color */
 .story-overlay .story-article-body .nanay-poem {
   color: #fff;
 }
@@ -2606,7 +2606,7 @@
 </head>
 <body >
 
-<!-- Core onclick functions — defined immediately so they work before full page load -->
+<!-- Core onclick functions - defined immediately so they work before full page load -->
 <script>
 var _storyScrollPos = 0;
 
@@ -2644,15 +2644,15 @@ function handleContactForm(e) {
   e.preventDefault();
   var form = document.getElementById('contact-form');
 
-  // Honeypot check — if filled, silently reject (it's a bot)
+  // Honeypot check - if filled, silently reject (it's a bot)
   var hp = form.querySelector('[name="website_url_hp"]');
   if (hp && hp.value.length > 0) {
     form.style.display = 'none';
     document.getElementById('contact-success').style.display = 'block';
-    return; // Fake success — don't tell the bot
+    return; // Fake success - don't tell the bot
   }
 
-  // Sanitize inputs — strip HTML tags
+  // Sanitize inputs - strip HTML tags
   function sanitize(str) { return str.replace(/<[^>]*>/g, '').trim(); }
 
   var name = sanitize(form.querySelector('[name="contact_name"]').value);
@@ -2667,7 +2667,7 @@ function handleContactForm(e) {
     return;
   }
 
-  // Rate limiting — max 3 submissions per session
+  // Rate limiting - max 3 submissions per session
   if (!window._contactSubmissions) window._contactSubmissions = 0;
   window._contactSubmissions++;
   if (window._contactSubmissions > 3) {
@@ -2675,7 +2675,7 @@ function handleContactForm(e) {
     return;
   }
 
-  // No backend yet — hand off to the visitor's own mail app so no message is lost
+  // No backend yet - hand off to the visitor's own mail app so no message is lost
   var subject = encodeURIComponent('Inquiry from blasramos.com - ' + name);
   var body = encodeURIComponent(message + '\n\nFrom: ' + name + '\nEmail: ' + email);
   window.location.href = 'mailto:care@tavaraholdings.com?subject=' + subject + '&body=' + body;
@@ -2815,7 +2815,7 @@ function filterDoor(filter, clickedBtn) {
       <span class="mantra-call">Change your story.</span>
       <span class="mantra-call mantra-call--last">Change your world toward greatness.&rdquo;</span>
     </div>
-    <p class="mantra-attr">&mdash; Blas Ramos</p>
+    <p class="mantra-attr">- Blas Ramos</p>
   </div>
 </div>
 
@@ -2853,7 +2853,7 @@ function filterDoor(filter, clickedBtn) {
         </div>
         <p class="about-advisory-line">Independent advisory and project leadership for enterprise transformations.</p>
       </div>
-      <p><strong>Blas Ramos</strong> is the Founder &amp; Chief Visionary Officer of <strong>TAVARA HOLDINGS</strong>, built on <strong>20+ years</strong> driving enterprise transformation across APAC and global markets, contributing to operations supporting <strong>multi-million budgets and P&amp;L</strong> from different organizations across APAC and other regions, and <strong>8 personal cycles of reinvention</strong> — each one forged through real failure, hard lessons, and the choice to rise again. <strong>OPTIMA PRAXIS</strong> is his advisory practice. <strong>SOLOMON TEKNIKA</strong> is his delivery engine.</p>
+      <p><strong>Blas Ramos</strong> is the Founder &amp; Chief Visionary Officer of <strong>TAVARA HOLDINGS</strong>, built on <strong>20+ years</strong> driving enterprise transformation across APAC and global markets, contributing to operations supporting <strong>multi-million budgets and P&amp;L</strong> from different organizations across APAC and other regions, and <strong>8 personal cycles of reinvention</strong> - each one forged through real failure, hard lessons, and the choice to rise again. <strong>OPTIMA PRAXIS</strong> is his advisory practice. <strong>SOLOMON TEKNIKA</strong> is his delivery engine.</p>
       <p>His career spans global industries: <strong>Financial Technology, IT Consulting &amp; Outsourcing, Telecommunications, Retail &amp; Consumer Goods, Enterprise Technology Services, Unified Communications, Business Process Outsourcing, Automotive, FMCG, Mining &amp; Resources, and Pharmaceuticals</strong>, achieving sustained cost optimization of 25&ndash;30%, SLA improvements from 75% to 95%, and leading innovation and talent development strategies in mission-critical, 24/7 environments.</p>
       <p>A graduate of the <strong>ICD</strong> and <strong>CMC</strong> programs providing board-level strategic insight, a professionally trained coach and <strong>behavioral change specialist</strong>, and active <strong>public speaker and training facilitator</strong> for government, academe, and private sector audiences. Blas Ramos is not your typical motivational speaker. He is a <strong>transformation partner</strong>.</p>
 
@@ -2945,7 +2945,7 @@ function filterDoor(filter, clickedBtn) {
           <div class="cluster-header">Telecommunications &amp; Technology</div>
           <div class="cluster-item">
             <h4>Service Delivery &amp; Operations Manager</h4>
-            <div class="cluster-detail">Transitioned network operations across continents&mdash;restructuring how infrastructure support was managed globally. Delivered 30% workforce savings while maintaining 24/7 uptime and zero-downtime migration.</div>
+            <div class="cluster-detail">Transitioned network operations across continents-restructuring how infrastructure support was managed globally. Delivered 30% workforce savings while maintaining 24/7 uptime and zero-downtime migration.</div>
           </div>
         </div>
 
@@ -2953,7 +2953,7 @@ function filterDoor(filter, clickedBtn) {
           <div class="cluster-header">Retail &amp; Consumer Goods</div>
           <div class="cluster-item">
             <h4>Delivery Head | Service Delivery &amp; Transition</h4>
-            <div class="cluster-detail">Transformed IT service delivery across multiple markets by raising performance standards, expanding service offerings, and migrating operations to offshore shared services&mdash;cutting support costs 30% and growing subscriptions 15% YoY.</div>
+            <div class="cluster-detail">Transformed IT service delivery across multiple markets by raising performance standards, expanding service offerings, and migrating operations to offshore shared services-cutting support costs 30% and growing subscriptions 15% YoY.</div>
           </div>
         </div>
 
@@ -2961,7 +2961,7 @@ function filterDoor(filter, clickedBtn) {
           <div class="cluster-header">Consulting &amp; Business Process Outsourcing</div>
           <div class="cluster-item">
             <h4>Delivery Head | ERP, Tech Services &amp; Learning</h4>
-            <div class="cluster-detail">Transformed a multi-capability delivery organization into a high-reliability operation&mdash;raising SLA compliance from 75% to 95%, reducing operational costs 25%, and growing client accounts 15%+ YoY. Built competency frameworks that scaled consulting capability across multiple disciplines.</div>
+            <div class="cluster-detail">Transformed a multi-capability delivery organization into a high-reliability operation-raising SLA compliance from 75% to 95%, reducing operational costs 25%, and growing client accounts 15%+ YoY. Built competency frameworks that scaled consulting capability across multiple disciplines.</div>
           </div>
           <div class="cluster-item">
             <h4>Consultants Director</h4>
@@ -2969,7 +2969,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div class="cluster-item">
             <h4>Project Manager | SAP Implementation</h4>
-            <div class="cluster-detail">Led an end-to-end SAP transformation&mdash;redesigning workflows and embedding disciplined governance of budget, timeline, and resources to deliver measurable margin improvement.</div>
+            <div class="cluster-detail">Led an end-to-end SAP transformation-redesigning workflows and embedding disciplined governance of budget, timeline, and resources to deliver measurable margin improvement.</div>
           </div>
           <div class="cluster-item">
             <h4>Consulting / Project Manager</h4>
@@ -3095,7 +3095,7 @@ function filterDoor(filter, clickedBtn) {
 
     <div class="stories-grid">
 
-    <!-- Entry 000 — VIDEO (pinned) -->
+    <!-- Entry 000 - VIDEO (pinned) -->
     <div class="story-card featured" data-category="personal" onclick="document.getElementById('video-section').scrollIntoView({behavior:'smooth'});" style="cursor:pointer;">
       <div class="story-card-inner">
         <div class="diary-meta">
@@ -3115,7 +3115,7 @@ function filterDoor(filter, clickedBtn) {
           <span class="diary-number">Entry 001</span>
                     <span class="story-card-tag">Personal</span>
         </div>
-        <h3 class="story-card-title">From Pavement to Platform — A Taxi Driver Leads</h3>
+        <h3 class="story-card-title">From Pavement to Platform - A Taxi Driver Leads</h3>
         <p class="diary-opener">"The taxi driver didn't know he was being watched. Neither did I."</p>
         <span class="story-card-arrow">→ Continue reading</span>
       </div>
@@ -3238,7 +3238,7 @@ function filterDoor(filter, clickedBtn) {
       </div>
     </div>
 
-    <!-- Entry 011 — LATEST -->
+    <!-- Entry 011 - LATEST -->
     <div style="cursor:pointer" onclick="openStory('the-driver')" class="story-card" data-category="personal" style="border-top:2px solid #E52235;">
       <div class="story-card-inner">
         <div class="diary-meta">
@@ -3319,7 +3319,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div class="plat-tag">Healthcare · AI</div>
           <div class="plat-name">HANAPDOK</div>
-          <p class="plat-desc">Your family needs a doctor. HANAPDOK finds the right one — from 576,514 GPS-verified providers across 70+ countries — in seconds.</p>
+          <p class="plat-desc">Your family needs a doctor. HANAPDOK finds the right one - from 576,514 GPS-verified providers across 70+ countries - in seconds.</p>
           <div class="plat-url">hanapdok.com →</div>
         </a>
 
@@ -3369,7 +3369,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div class="plat-tag">ERP · SME · BIR</div>
           <div class="plat-name">TAVARA ERP</div>
-          <p class="plat-desc">Your SME needs payroll, BIR compliance, POS, and inventory — all in one system built for Philippine businesses.</p>
+          <p class="plat-desc">Your SME needs payroll, BIR compliance, POS, and inventory - all in one system built for Philippine businesses.</p>
           <div class="plat-url">tavaraerp.com →</div>
         </a>
 
@@ -3380,7 +3380,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div class="plat-tag">Procurement · Gov't · B2B</div>
           <div class="plat-name">KONEKBID</div>
-          <p class="plat-desc">Philippine government bids are buried in 100-page documents. KONEKBID reads every PhilGEPS bid, scores your qualification match, and fills your submission — in minutes.</p>
+          <p class="plat-desc">Philippine government bids are buried in 100-page documents. KONEKBID reads every PhilGEPS bid, scores your qualification match, and fills your submission - in minutes.</p>
           <div class="plat-url">konekbid.com →</div>
         </a>
 
@@ -3402,7 +3402,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div class="plat-tag">AI Governance · Compliance</div>
           <div class="plat-name">AIRA</div>
-          <p class="plat-desc">Your board is asking about AI risk. AIRA gives you the answers — board-grade AI readiness across 27 jurisdictions.</p>
+          <p class="plat-desc">Your board is asking about AI risk. AIRA gives you the answers - board-grade AI readiness across 27 jurisdictions.</p>
           <div class="plat-url">airagov.com →</div>
         </a>
 
@@ -3413,7 +3413,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div class="plat-tag">Operations · AI</div>
           <div class="plat-name">BLUEWHALE</div>
-          <p class="plat-desc">Healthcare and enterprise operations are complex. BLUEWHALE runs the monitoring, compliance, and speed — so your team doesn't have to.</p>
+          <p class="plat-desc">Healthcare and enterprise operations are complex. BLUEWHALE runs the monitoring, compliance, and speed - so your team doesn't have to.</p>
           <div class="plat-url">bluewhaleops.com →</div>
         </a>
 
@@ -3546,7 +3546,7 @@ function filterDoor(filter, clickedBtn) {
             <p style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">For teams ready to move past what has been holding them back</p>
           </div>
         </div>
-        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">A customized 2-day leadership session for supervisors and managers — covering collaborative team dynamics (The A-TEAM), what makes a high-performing team, the character of real leaders, how to break barriers in the workplace, and how to think and act like an intrapreneur. Built from lived experience, not borrowed theory.</p>
+        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">A customized 2-day leadership session for supervisors and managers - covering collaborative team dynamics (The A-TEAM), what makes a high-performing team, the character of real leaders, how to break barriers in the workplace, and how to think and act like an intrapreneur. Built from lived experience, not borrowed theory.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#fef2f2;color:#E52235;font-weight:600;font-family:'DM Sans',sans-serif;">Leadership</span>
@@ -3570,7 +3570,7 @@ function filterDoor(filter, clickedBtn) {
             <p style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">For leaders whose job is to grow other leaders</p>
           </div>
         </div>
-        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">For managers, team leads, and senior practitioners who are responsible for developing others — this talk goes inside the craft of coaching. How to hold the space without solving it. How to ask before advising. How to develop people without creating dependency.</p>
+        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">For managers, team leads, and senior practitioners who are responsible for developing others - this talk goes inside the craft of coaching. How to hold the space without solving it. How to ask before advising. How to develop people without creating dependency.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#eff6ff;color:#1B3A6B;font-weight:600;font-family:'DM Sans',sans-serif;">Coaching</span>
@@ -3593,7 +3593,7 @@ function filterDoor(filter, clickedBtn) {
             <p style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">For organizations standing at the edge of going digital</p>
           </div>
         </div>
-        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">For companies considering or mid-stream in a digital transformation journey. This talk cuts through the noise — what digital transformation actually is, what it costs that no budget line will show you, what leadership behaviors make or break it, and what a realistic roadmap looks like.</p>
+        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">For companies considering or mid-stream in a digital transformation journey. This talk cuts through the noise - what digital transformation actually is, what it costs that no budget line will show you, what leadership behaviors make or break it, and what a realistic roadmap looks like.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#f0fdf4;color:#0F766E;font-weight:600;font-family:'DM Sans',sans-serif;">Digital</span>
@@ -3617,7 +3617,7 @@ function filterDoor(filter, clickedBtn) {
             <p style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">For leaders navigating change across people, process, and platform</p>
           </div>
         </div>
-        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">Drawn from driving transformation across 10+ industries — migrations of platforms, transitions of teams, and full-scale transformations of how an enterprise operates. This talk gives leaders the vocabulary and the mental models to lead through each phase without losing momentum or people.</p>
+        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">Drawn from driving transformation across 10+ industries - migrations of platforms, transitions of teams, and full-scale transformations of how an enterprise operates. This talk gives leaders the vocabulary and the mental models to lead through each phase without losing momentum or people.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#f5f3ff;color:#7C3AED;font-weight:600;font-family:'DM Sans',sans-serif;">Change Mgmt</span>
@@ -3637,11 +3637,11 @@ function filterDoor(filter, clickedBtn) {
           </div>
           <div>
             <div style="font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:#d97706;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:0.3rem;">Innovation &bull; Corporate Culture</div>
-            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:#1B3A6B;line-height:1.25;margin:0;">Intrapreneur &mdash; Think Like an Entrepreneur</h3>
+            <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:#1B3A6B;line-height:1.25;margin:0;">Intrapreneur - Think Like an Entrepreneur</h3>
             <p style="font-family:'DM Sans',sans-serif;font-size:0.75rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">For employees and managers who want to create more value from within</p>
           </div>
         </div>
-        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">You don't have to leave the company to think like a founder. This talk equips employees, supervisors, and managers with the entrepreneurial mindset — how to take ownership, spot opportunities, move with initiative, and create value from within the organization. For companies that want innovation without losing their best people.</p>
+        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">You don't have to leave the company to think like a founder. This talk equips employees, supervisors, and managers with the entrepreneurial mindset - how to take ownership, spot opportunities, move with initiative, and create value from within the organization. For companies that want innovation without losing their best people.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#fffbeb;color:#d97706;font-weight:600;font-family:'DM Sans',sans-serif;">Innovation</span>
@@ -3666,7 +3666,7 @@ function filterDoor(filter, clickedBtn) {
             <p style="font-family:'DM Sans',sans-serif;font-size:0.78rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">Building a Culture of Continuous Improvement</p>
           </div>
         </div>
-        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">Sustainable transformation does not happen through strategy alone — it lives in the daily habits and decisions of every person in the organization. This talk introduces Lean Sigma fundamentals as a cultural practice, not just a process tool: how leaders at every level eliminate waste, reduce variation, and build teams that continuously improve without being told to. Practical. Grounded. Built for real organizations.</p>
+        <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin-bottom:1.5rem;">Sustainable transformation does not happen through strategy alone - it lives in the daily habits and decisions of every person in the organization. This talk introduces Lean Sigma fundamentals as a cultural practice, not just a process tool: how leaders at every level eliminate waste, reduce variation, and build teams that continuously improve without being told to. Practical. Grounded. Built for real organizations.</p>
         <div style="display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#ecfeff;color:#0e7490;font-weight:600;font-family:'DM Sans',sans-serif;">Lean Sigma</span>
@@ -3688,7 +3688,7 @@ function filterDoor(filter, clickedBtn) {
             <div style="font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:#16a34a;font-weight:600;font-family:'DM Sans',sans-serif;margin-bottom:0.3rem;">Data Literacy &bull; Decision-Making &bull; Leadership Enabler</div>
             <h3 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:#1B3A6B;line-height:1.25;margin:0 0 0.85rem;">Making Sense of the Numbers</h3>
             <p style="font-family:'DM Sans',sans-serif;font-size:0.78rem;font-style:italic;color:#94a3b8;margin:0.2rem 0 0;">How Data Literacy Drives Better Decisions at Every Level</p>
-            <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin:0;">Leaders at every level make decisions that depend on data — but most were never taught how to read it. This talk equips non-technical professionals with the foundation they need: how to ask better questions, understand what data is actually telling you, and turn raw numbers into decisions that move the organization forward. No formulas. No coding. Just clear thinking that makes better leaders.</p>
+            <p style="font-size:0.92rem;color:#475569;line-height:1.75;margin:0;">Leaders at every level make decisions that depend on data - but most were never taught how to read it. This talk equips non-technical professionals with the foundation they need: how to ask better questions, understand what data is actually telling you, and turn raw numbers into decisions that move the organization forward. No formulas. No coding. Just clear thinking that makes better leaders.</p>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-shrink:0;min-width:140px;">
@@ -3707,7 +3707,7 @@ function filterDoor(filter, clickedBtn) {
 
     <!-- Speaking Social Proof -->
     <div class="reveal" style="margin-top:3rem;padding:2rem 2.5rem;background:#f1f5f9;border-radius:12px;border:1.5px solid #e2e8f0;">
-      <p style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#94a3b8;font-family:'DM Sans',sans-serif;font-weight:600;text-align:center;margin-bottom:1.75rem;">Organizations Served — Breaking the Barriers</p>
+      <p style="font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:#94a3b8;font-family:'DM Sans',sans-serif;font-weight:600;text-align:center;margin-bottom:1.75rem;">Organizations Served - Breaking the Barriers</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2rem;">
 
         <!-- iparcel -->
@@ -3755,7 +3755,7 @@ function filterDoor(filter, clickedBtn) {
       <div style="position:relative;border-radius:10px;overflow:hidden;">
         <img src="images/image_22.webp" alt="Breaking the Barriers group photo" style="width:100%;display:block;border-radius:10px;">
         <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(27,58,107,0.75));padding:1rem 1.5rem;">
-          <p style="font-size:0.75rem;color:rgba(255,255,255,0.85);font-family:'DM Sans',sans-serif;margin:0;font-style:italic;">"Breaking the Barriers" &mdash; NAGALI Building, Quezon City</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.85);font-family:'DM Sans',sans-serif;margin:0;font-style:italic;">"Breaking the Barriers" - NAGALI Building, Quezon City</p>
         </div>
       </div>
     </div>
@@ -3786,7 +3786,7 @@ function filterDoor(filter, clickedBtn) {
           <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
             <div>
               <div style="font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:700;color:#1B3A6B;">Jerdeliza</div>
-              <div style="font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#94a3b8;">Participant &mdash; Making Sense of the Numbers &bull; Aljay Agro Industrial</div>
+              <div style="font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#94a3b8;">Participant - Making Sense of the Numbers &bull; Aljay Agro Industrial</div>
             </div>
             <div style="margin-left:auto;">
               <span style="font-size:0.7rem;padding:0.3rem 0.75rem;border-radius:20px;background:#fef2f2;color:#E52235;font-weight:600;font-family:'DM Sans',sans-serif;">Verified Participant</span>
@@ -3798,7 +3798,7 @@ function filterDoor(filter, clickedBtn) {
       <div style="position:relative;border-radius:10px;overflow:hidden;margin-top:1.25rem;">
         <img src="images/image_23.webp" alt="Blas Ramos speaking at Aljay Agro Industrial" style="width:100%;display:block;border-radius:10px;">
         <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(27,58,107,0.8));padding:1rem 1.5rem;">
-          <p style="font-size:0.75rem;color:rgba(255,255,255,0.9);font-family:'DM Sans',sans-serif;margin:0;font-style:italic;">Making Sense of the Numbers &mdash; Aljay Agro Industrial</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.9);font-family:'DM Sans',sans-serif;margin:0;font-style:italic;">Making Sense of the Numbers - Aljay Agro Industrial</p>
         </div>
       </div>
     </div>
@@ -3822,13 +3822,13 @@ function filterDoor(filter, clickedBtn) {
 
 
 
-<!-- TAVARA PROOF — this is what transformation looks like in practice -->
+<!-- TAVARA PROOF - this is what transformation looks like in practice -->
 <section id="tavara-proof" style="background:#f8f6f3; padding:6rem 2rem;">
   <div style="max-width:1100px; margin:0 auto;">
     <div style="text-align:center; margin-bottom:3.5rem;">
       <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:#E52235; margin-bottom:1rem;">Proof of Method</div>
       <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4vw,3rem); color:#0B1730; margin-bottom:1rem; line-height:1.2;">I don't just teach transformation. I build it.</h2>
-      <p style="color:#5C6070; font-size:1rem; max-width:580px; margin:0 auto;">TAVARA HOLDINGS is the Philippine Operating System — built venture by venture on the same five-phase method. 6 products live. Three verticals. One mission.</p>
+      <p style="color:#5C6070; font-size:1rem; max-width:580px; margin:0 auto;">TAVARA HOLDINGS is the Philippine Operating System - built venture by venture on the same five-phase method. 6 products live. Three verticals. One mission.</p>
     </div>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.25rem; margin-bottom:2.5rem;">
       <a href="https://hanapdok.com" target="_blank" style="display:block; padding:1.75rem 1.5rem; background:#fff; border:1px solid #e8e4df; border-radius:4px; text-decoration:none; transition:box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(11,23,48,0.10)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='none'" >
@@ -3844,7 +3844,7 @@ function filterDoor(filter, clickedBtn) {
       <a href="https://komuniti.cloud" target="_blank" style="display:block; padding:1.75rem 1.5rem; background:#fff; border:1px solid #e8e4df; border-radius:4px; text-decoration:none; transition:box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(11,23,48,0.10)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='none'" >
         <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#E52235; margin-bottom:0.5rem;">🟢 LIVE · Property</div>
         <div style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:600; color:#0B1730; margin-bottom:0.5rem;">KOMUNITI</div>
-        <div style="font-size:0.85rem; color:#5C6070; line-height:1.5;">HOA management platform. Dues, announcements, governance — all in one.</div>
+        <div style="font-size:0.85rem; color:#5C6070; line-height:1.5;">HOA management platform. Dues, announcements, governance - all in one.</div>
       </a>
       <a href="https://bluewhaleops.com" target="_blank" style="display:block; padding:1.75rem 1.5rem; background:#fff; border:1px solid #e8e4df; border-radius:4px; text-decoration:none; transition:box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(11,23,48,0.10)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='none'" >
         <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#E52235; margin-bottom:0.5rem;">🟢 LIVE · Monitoring</div>
@@ -3854,7 +3854,7 @@ function filterDoor(filter, clickedBtn) {
       <a href="https://tavaraerp.com" target="_blank" style="display:block; padding:1.75rem 1.5rem; background:#fff; border:1px solid #e8e4df; border-radius:4px; text-decoration:none; transition:box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(11,23,48,0.10)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none'; this.style.transform='none'" >
         <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:#E52235; margin-bottom:0.5rem;">🟢 LIVE · ERP</div>
         <div style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:600; color:#0B1730; margin-bottom:0.5rem;">TAVARA ERP</div>
-        <div style="font-size:0.85rem; color:#5C6070; line-height:1.5;">Full-stack ERP for Philippine SMEs. BIR compliance, payroll, POS, inventory — 11 modules.</div>
+        <div style="font-size:0.85rem; color:#5C6070; line-height:1.5;">Full-stack ERP for Philippine SMEs. BIR compliance, payroll, POS, inventory - 11 modules.</div>
       </a>
     </div>
     <div style="text-align:center;">
@@ -3883,7 +3883,7 @@ function filterDoor(filter, clickedBtn) {
       </div>
 
     <form id="contact-form" method="POST" action="#" style="margin-top:3rem; text-align:left; display:grid; grid-template-columns:1fr 1fr; gap:1.25rem 1.5rem; max-width:680px; margin-left:auto; margin-right:auto;" onsubmit="handleContactForm(event)">
-      <!-- Honeypot anti-spam field — hidden from real users, bots fill it in -->
+      <!-- Honeypot anti-spam field - hidden from real users, bots fill it in -->
       <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;height:0;width:0;overflow:hidden;" aria-hidden="true">
         <label for="website_url_hp">Leave this empty</label>
         <input type="text" id="website_url_hp" name="website_url_hp" tabindex="-1" autocomplete="off" value="">
@@ -3983,7 +3983,7 @@ function filterDoor(filter, clickedBtn) {
   <div class="footer-divider"></div>
   <div class="footer-signature">
     <p class="footer-sig-quote">&ldquo;Each day comes with abundant blessings that sometimes seem unseen.&rdquo;</p>
-    <p class="footer-sig-attr">&mdash; Blas Ramos</p>
+    <p class="footer-sig-attr">- Blas Ramos</p>
     <p class="footer-sig-acronym"><strong>B</strong>reaking <strong>L</strong>imits <strong>A</strong>chieves <strong>S</strong>uccess</p>
   </div>
   <div class="footer-divider"></div>
@@ -4004,46 +4004,46 @@ function filterDoor(filter, clickedBtn) {
   <div class="story-hero-image"><img src="images/image_24.jpg" alt="Taxi on a rainy city night" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
   <header class="story-article-header">
     <div class="story-article-cat">Transformation</div>
-    <h1 class="story-article-title">From Pavement to Platform — A Taxi Driver Leads</h1>
+    <h1 class="story-article-title">From Pavement to Platform - A Taxi Driver Leads</h1>
     <div class="story-article-meta">Blas Ramos</div>
   </header>
   <div class="story-article-body">
     <p class="story-p">I drove a taxi.</p>
 <p class="story-p">Not as a side hustle. Not as a "gap year experience." As my job. My only source of income after finishing college in the Philippines.</p>
 <p class="story-p">No corporate ladder. No management trainee program. No mentor waiting to hand me a roadmap. Just a steering wheel, a meter, and twelve-hour shifts through Manila traffic.</p>
-<p class="story-p">I'm telling you this because everything I know about transformation — everything I now teach to executives, teams, and organizations — started on that pavement.</p>
+<p class="story-p">I'm telling you this because everything I know about transformation - everything I now teach to executives, teams, and organizations - started on that pavement.</p>
 <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">What the Taxi Taught Me</h4>
 <p class="story-p">When you drive a taxi, you learn things that no business school will ever teach you.</p>
 <p class="story-p">You learn to read people in seconds. Who's in a hurry. Who's had a bad day. Who wants to talk. Who needs silence. That skill? I still use it in every boardroom I walk into.</p>
-<p class="story-p">You learn that every fare is a negotiation. Not for money — for trust. A passenger is trusting you with their time, their safety, sometimes their secrets. You earn that trust in the first thirty seconds or you lose it.</p>
+<p class="story-p">You learn that every fare is a negotiation. Not for money - for trust. A passenger is trusting you with their time, their safety, sometimes their secrets. You earn that trust in the first thirty seconds or you lose it.</p>
 <p class="story-p">You learn that the route matters less than the driver. Two drivers can take the same road and deliver completely different experiences. That's true in taxis. It's true in organizations.</p>
 <p class="story-p">And you learn what it feels like to be invisible. To have people look through you. To be defined by what you do instead of who you are.</p>
 <p class="story-p">That last lesson took me twenty years to fully understand.</p>
 <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">The Long Road Between</h4>
-<p class="story-p">From that taxi, I somehow — through a combination of stubbornness, luck, and a few people who believed in me more than I believed in myself — built a career in operations and transformation.</p>
+<p class="story-p">From that taxi, I somehow - through a combination of stubbornness, luck, and a few people who believed in me more than I believed in myself - built a career in operations and transformation.</p>
 <p class="story-p">Multiple countries across APAC and other regions. Multi-million budgets and P&Ls from different organizations. Brands that most people would recognize. Teams that were broken and needed rebuilding. Migrations that crossed continents and cultures.</p>
 <p class="story-p">I went from driving people across Manila to leading people across borders.</p>
-<p class="story-p">But here's what I need you to understand: the taxi didn't just come before the career. The taxi <strong>built</strong> the career. Every skill I developed on that front seat — the reading of people, the earning of trust, the understanding that the driver matters more than the route — became the foundation for how I lead transformation.</p>
+<p class="story-p">But here's what I need you to understand: the taxi didn't just come before the career. The taxi <strong>built</strong> the career. Every skill I developed on that front seat - the reading of people, the earning of trust, the understanding that the driver matters more than the route - became the foundation for how I lead transformation.</p>
 <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">The Framework That Nobody Planned</h4>
 <p class="story-p">Looking back, I can see my entire journey through a pattern I didn't recognize while I was living it.</p>
-<p class="story-p"><strong>OWN.</strong> In that taxi, I had to own my reality. No sugarcoating. No pretending I was somewhere else in life. I was a taxi driver. That was the truth. And the moment I stopped being ashamed of it and started being curious about what it could teach me — everything shifted.</p>
+<p class="story-p"><strong>OWN.</strong> In that taxi, I had to own my reality. No sugarcoating. No pretending I was somewhere else in life. I was a taxi driver. That was the truth. And the moment I stopped being ashamed of it and started being curious about what it could teach me - everything shifted.</p>
 <p class="story-p"><strong>PIVOT.</strong> The pivot wasn't dramatic. It wasn't a movie scene where I threw down the keys and declared I'd conquer the world. It was slow. One decision at a time. One application. One interview. One small step that felt terrifying and looked insignificant. But each one had direction.</p>
-<p class="story-p"><strong>EXCEED.</strong> Every time I thought I'd hit my ceiling — first real corporate job, first management role, first international assignment — there was another ceiling above it. Exceeding isn't about ambition. It's about refusing to accept that the current ceiling is the final one. The taxi driver was told his ceiling was the taxi. It wasn't.</p>
-<p class="story-p"><strong>INTERNALIZE.</strong> This is the phase that took the longest. Making the transformation part of who I am — not just what my resume says. The taxi driver who became a transformation leader isn't two different people. He's one person who internalized every lesson from every phase and carried them all forward.</p>
-<p class="story-p"><strong>SCALE.</strong> Now, with OPTIMA PRAXIS, I'm scaling what I've learned. Not just telling the story — but building it into a system that helps others find their own path from pavement to platform. Individuals who feel stuck. Teams that are underperforming. Executives who've lost their edge. Organizations that need transformation that actually lasts.</p>
+<p class="story-p"><strong>EXCEED.</strong> Every time I thought I'd hit my ceiling - first real corporate job, first management role, first international assignment - there was another ceiling above it. Exceeding isn't about ambition. It's about refusing to accept that the current ceiling is the final one. The taxi driver was told his ceiling was the taxi. It wasn't.</p>
+<p class="story-p"><strong>INTERNALIZE.</strong> This is the phase that took the longest. Making the transformation part of who I am - not just what my resume says. The taxi driver who became a transformation leader isn't two different people. He's one person who internalized every lesson from every phase and carried them all forward.</p>
+<p class="story-p"><strong>SCALE.</strong> Now, with OPTIMA PRAXIS, I'm scaling what I've learned. Not just telling the story - but building it into a system that helps others find their own path from pavement to platform. Individuals who feel stuck. Teams that are underperforming. Executives who've lost their edge. Organizations that need transformation that actually lasts.</p>
 <p class="story-p">That framework was not designed in a conference room. I lived it on the road.</p>
 <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">Why This Matters to You</h4>
 <p class="story-p">You might be reading this from a corner office. Or from a cubicle you've outgrown. Or from a season of your career that feels like a dead end.</p>
-<p class="story-p">Wherever you are — you're on the pavement. And there's a platform waiting.</p>
+<p class="story-p">Wherever you are - you're on the pavement. And there's a platform waiting.</p>
 <p class="story-p">Not the kind someone gives you. The kind you build. One owned truth at a time. One deliberate pivot at a time. One broken ceiling at a time.</p>
 <p class="story-p">I know because I built mine. And the foundation was a taxi in Manila.</p>
 <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">What I'm Doing Now</h4>
-<p class="story-p">Today, I run <strong>OPTIMA PRAXIS</strong> — a consulting and speaking practice built on the belief that transformation isn't about motivation. It's about method.</p>
+<p class="story-p">Today, I run <strong>OPTIMA PRAXIS</strong> - a consulting and speaking practice built on the belief that transformation isn't about motivation. It's about method.</p>
 <p class="story-p">I work with individuals finding their footing, teams finding their rhythm, executives finding their honesty, and organizations finding their future.</p>
 <p class="story-p">Not because I read about transformation in a book.</p>
 <p class="story-p">Because I drove through it. Literally.</p>
 <hr style="border:none;border-top:1px solid #E5E7EB;margin:2rem 0;">
-<p class="story-p">If your organization is navigating change — or if you're personally in a season of transition — I'd welcome the conversation.</p>
+<p class="story-p">If your organization is navigating change - or if you're personally in a season of transition - I'd welcome the conversation.</p>
 <p class="story-p"><strong>Blas Ramos</strong></p>
 <p class="story-p">Catalyst | Partner | Innovator | Strategist | Speaker</p>
 <p class="story-p">Founder, OPTIMA PRAXIS</p>
@@ -4312,11 +4312,11 @@ function filterDoor(filter, clickedBtn) {
         <div class="nanay-poem">
           <p class="nanay-poem-title">My NANAY LORING</p>
           <div class="nanay-poem-lines">
-            <p><span class="nanay-letter">N</span> &mdash; Nine months you lovingly carried us in your womb</p>
-            <p><span class="nanay-letter">A</span> &mdash; At the last minute, you brought us to this world and to our home</p>
-            <p><span class="nanay-letter">N</span> &mdash; Nothing we knew in life since the day we were born. But</p>
-            <p><span class="nanay-letter">A</span> &mdash; At every step we made, your light guided our path to get us through</p>
-            <p><span class="nanay-letter">Y</span> &mdash; Years of your life dedicated to us and consumed but you expect nothing in return</p>
+            <p><span class="nanay-letter">N</span> - Nine months you lovingly carried us in your womb</p>
+            <p><span class="nanay-letter">A</span> - At the last minute, you brought us to this world and to our home</p>
+            <p><span class="nanay-letter">N</span> - Nothing we knew in life since the day we were born. But</p>
+            <p><span class="nanay-letter">A</span> - At every step we made, your light guided our path to get us through</p>
+            <p><span class="nanay-letter">Y</span> - Years of your life dedicated to us and consumed but you expect nothing in return</p>
           </div>
           <p class="nanay-poem-close">Thank you for the life, NANAY!</p>
         </div>
@@ -4334,7 +4334,7 @@ function filterDoor(filter, clickedBtn) {
     <a class="nav-brand" onclick="closeStory()" style="cursor:pointer;text-decoration:none;">Blas Ramos</a>
     <button onclick="closeStory()">&larr; Back to Home</button>
   </nav>
-  <div class="story-hero-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="Leadership lessons — Blas Ramos" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"></div>
+  <div class="story-hero-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" alt="Leadership lessons - Blas Ramos" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"></div>
   <header class="story-article-header">
     <div class="story-article-cat">Leadership</div>
     <h1 class="story-article-title">3 Lessons in Leadership</h1>
@@ -4346,7 +4346,7 @@ function filterDoor(filter, clickedBtn) {
         <div class="lessons-grid">
 
           <div class="lesson-card">
-            <img class="lesson-card-img" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="ALL IN — Trust and commitment in leadership" />
+            <img class="lesson-card-img" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="ALL IN - Trust and commitment in leadership" />
             <div class="lesson-card-body">
               <p class="lesson-number">Lesson 01</p>
               <h4 class="lesson-title">&ldquo;ALL IN&rdquo;</h4>
@@ -4356,7 +4356,7 @@ function filterDoor(filter, clickedBtn) {
           </div>
 
           <div class="lesson-card">
-            <img class="lesson-card-img" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="Be on the driver's seat — leadership in action" />
+            <img class="lesson-card-img" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80" alt="Be on the driver's seat - leadership in action" />
             <div class="lesson-card-body">
               <p class="lesson-number">Lesson 02</p>
               <h4 class="lesson-title">Be on the Driver&rsquo;s Seat</h4>
@@ -4400,7 +4400,7 @@ function filterDoor(filter, clickedBtn) {
   </header>
   <div class="story-article-body">
     <div class="btb-event-photo" style="margin-bottom:2.5rem; border-radius:8px; overflow:visible; box-shadow:0 12px 40px rgba(11,23,48,0.15);">
-        <img src="images/image_27.jpg" alt="Breaking the Barriers — Group photo with participants" style="width:100%; height:auto; display:block;" onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&q=80'">
+        <img src="images/image_27.jpg" alt="Breaking the Barriers - Group photo with participants" style="width:100%; height:auto; display:block;" onerror="this.src='https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&q=80'">
       </div>
 
       <p class="story-p"><em>What does it actually take to break through the invisible walls that keep individuals and organizations from reaching their full potential?</em> That was the central question when a room full of logistics professionals gathered for a two-day speaking and management consulting engagement, not just to hear an answer, but to confront the barriers they had been carrying without naming them.</p>
@@ -4455,7 +4455,7 @@ function filterDoor(filter, clickedBtn) {
   <div class="story-article-body">
     <div class="nanay-float-layout">
           <figure class="nanay-wrap-portrait">
-            <img src="images/image_28.jpg" alt="Jeepney — a symbol of resilience, journey, and rebuilding">
+            <img src="images/image_28.jpg" alt="Jeepney - a symbol of resilience, journey, and rebuilding">
           </figure>
         <p class="story-p">This is not a motivational article. I'm not going to tell you to "embrace the journey" or "trust the process." Those lines are for people who are comfortable. This is for the ones who aren't.</p>
         <p class="story-p">This is a record of what happened to me. What broke. What it cost. And the exact moves that changed the story.</p>
@@ -4472,19 +4472,19 @@ function filterDoor(filter, clickedBtn) {
         <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">Five Moves. One Framework. The One That Rebuilt Everything.</h4>
         <p class="story-p">I'm not going to pretend there was a clean turning point. There wasn't. It was a series of small, unglamorous decisions made in hard circumstances. But looking back, five things changed everything. They became the foundation of the method I now hand to others.</p>
 
-        <p class="story-p"><strong>O &mdash; OWN: I Owned the Truth That the Old Me Was No Longer Enough.</strong><br>
+        <p class="story-p"><strong>O - OWN: I Owned the Truth That the Old Me Was No Longer Enough.</strong><br>
         When the market no longer needed the version of me that existed, I didn't wait for someone to train me. I found the gaps myself. I studied. I enrolled. I asked for feedback I wasn't ready to hear. Reskilling isn't a program you attend. It's a decision you make about who you're willing to become.</p>
 
-        <p class="story-p"><strong>P &mdash; PIVOT: I Changed Direction When Everything Said Stay the Course.</strong><br>
-        This one was harder. Some of what I knew was just wrong. Some of my habits were holding me back. Some of my leadership assumptions were outdated. I had to strategically redirect &mdash; not just push harder in the wrong direction, but deliberately change course. That process is uncomfortable. It's also non-negotiable.</p>
+        <p class="story-p"><strong>P - PIVOT: I Changed Direction When Everything Said Stay the Course.</strong><br>
+        This one was harder. Some of what I knew was just wrong. Some of my habits were holding me back. Some of my leadership assumptions were outdated. I had to strategically redirect - not just push harder in the wrong direction, but deliberately change course. That process is uncomfortable. It's also non-negotiable.</p>
 
-        <p class="story-p"><strong>X &mdash; EXCEED: I Went Beyond Being Right. I Learned to Be Wise.</strong><br>
+        <p class="story-p"><strong>X - EXCEED: I Went Beyond Being Right. I Learned to Be Wise.</strong><br>
         I used to believe that being right was enough. It's not. I had to retool how I navigated organizations. Not to become political, but to become wiser. To understand systems. To see what was actually happening versus what was being said. To build alliances without losing integrity.</p>
 
-        <p class="story-p"><strong>I &mdash; INTERNALIZE: I Made Humility My New Operating System.</strong><br>
+        <p class="story-p"><strong>I - INTERNALIZE: I Made Humility My New Operating System.</strong><br>
         There is a version of pride that prevents recovery. I had it. It took real loss to break it. Financial. Professional. Personal. Humility isn't self-deprecation. It's an honest look at where you are and what you still need. I internalized that truth until it became part of who I am, not just a lesson I learned.</p>
 
-        <p class="story-p"><strong>S &mdash; SCALE: I Multiplied by Learning from Those Who Already Walked the Road.</strong><br>
+        <p class="story-p"><strong>S - SCALE: I Multiplied by Learning from Those Who Already Walked the Road.</strong><br>
         This one changed my trajectory faster than anything else. I stopped pretending I had it figured out and started seeking people who had walked harder roads and come out with wisdom. Mentors. Coaches. Senior practitioners. People who had nothing to gain from advising me. And gave it anyway. I listened. I applied. I scaled what I learned into how I lead and serve others.</p>
 
         <h4 style="font-family:'Playfair Display',Georgia,serif; font-size:1.3rem; font-weight:700; color:#0B1730; margin:2rem 0 0.75rem;">Your Move Starts Now</h4>
@@ -4516,7 +4516,7 @@ function filterDoor(filter, clickedBtn) {
 
 
 <script>
-/* === ENHANCEMENTS — runs after all DOM is loaded === */
+/* === ENHANCEMENTS - runs after all DOM is loaded === */
 
 // Loader
 (function() {
@@ -4620,7 +4620,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   </nav>
   <div class="story-overlay-inner">
     <div class="story-full story-full-text">
-      <div class="story-hero-image"><img src="images/image_21.jpg" alt="Blas Ramos — The Driver to The Founder" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;"></div>
+      <div class="story-hero-image"><img src="images/image_21.jpg" alt="Blas Ramos - The Driver to The Founder" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;"></div>
       <div class="story-overlay-header">
         <div class="story-article-tag">Entry 011 &middot; June 2026 &middot; Personal</div>
         <h1 class="story-article-title">THE DRIVER &rarr; THE MANAGER &rarr; THE DIRECTOR &rarr; THE FOUNDER</h1>
@@ -4632,7 +4632,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 
         <p class="story-p">Not metaphorically. I literally drove people from one place to another for money. Every peso earned by showing up, navigating the road, and getting someone safely to where they needed to go.</p>
 
-        <p class="story-p">I did not know then that I would spend the next twenty-plus years doing exactly the same thing &mdash; in conference rooms, server rooms, and boardrooms across 10+ countries.</p>
+        <p class="story-p">I did not know then that I would spend the next twenty-plus years doing exactly the same thing - in conference rooms, server rooms, and boardrooms across 10+ countries.</p>
 
         <p class="story-p">Different vehicle. Same job.</p>
 
@@ -4640,7 +4640,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 
         <p class="story-p">Managed out six times. Retrenched twice. Eight endings I never chose. For a long time, I kept score.</p>
 
-        <p class="story-p">Every exit felt like a verdict. Every managed-out, every retrenchment, every <em>&ldquo;we&rsquo;re going in a different direction&rdquo;</em> &mdash; I carried them like stones in my chest.</p>
+        <p class="story-p">Every exit felt like a verdict. Every managed-out, every retrenchment, every <em>&ldquo;we&rsquo;re going in a different direction&rdquo;</em> - I carried them like stones in my chest.</p>
 
         <p class="story-p">There were storms I walked through without an umbrella. Judgment that came before I was ever heard.</p>
 
@@ -4656,7 +4656,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 
         <p class="story-p">The machine did not break me. It revealed me.</p>
 
-        <p class="story-p">The last door was the one I thought would stay open. I gave that company everything. I planned my retirement there. I thought &mdash; <em>this time is different. This time I found the place that will keep me.</em></p>
+        <p class="story-p">The last door was the one I thought would stay open. I gave that company everything. I planned my retirement there. I thought - <em>this time is different. This time I found the place that will keep me.</em></p>
 
         <p class="story-p">They didn&rsquo;t keep me.</p>
 
@@ -4670,29 +4670,29 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 
         <p class="story-p">Seven platforms live. Three more in pre-launch. Zero outside capital. One laptop. One veranda. Many mugs of coffee.</p>
 
-        <p class="story-p">I designed a logo during that time &mdash; a B that points forward, navy to red, authority to fire. Underneath it: <em>Breaking Limits Achieves Success.</em></p>
+        <p class="story-p">I designed a logo during that time - a B that points forward, navy to red, authority to fire. Underneath it: <em>Breaking Limits Achieves Success.</em></p>
 
         <p class="story-p">I want to be honest about something. I did not believe it when I designed it. I made it because I needed something to hold on to while I figured out if I still believed in myself.</p>
 
-        <p class="story-p">OPTIMA PRAXIS is the practice &mdash; where I turn thirty years of survival into structured transformation for leaders and organizations.</p>
+        <p class="story-p">OPTIMA PRAXIS is the practice - where I turn thirty years of survival into structured transformation for leaders and organizations.</p>
 
-        <p class="story-p">SOLOMON TEKNIKA is the delivery engine &mdash; where everything gets built with precision.</p>
+        <p class="story-p">SOLOMON TEKNIKA is the delivery engine - where everything gets built with precision.</p>
 
         <p class="story-p">TAVARA HOLDINGS is the proof.</p>
 
         <p class="story-p">The taxi driver became the manager. The manager became the director. The director became the founder.</p>
 
-        <p class="story-p">Not a clean story. Not a straight line. Storms I walked through without an umbrella. But it is mine. Every painful exit, every gap between jobs where I wondered if the next door would open &mdash; all mine.</p>
+        <p class="story-p">Not a clean story. Not a straight line. Storms I walked through without an umbrella. But it is mine. Every painful exit, every gap between jobs where I wondered if the next door would open - all mine.</p>
 
         <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.5); padding-left:1.25rem; font-style:italic; color:var(--text-mid);">I was never the problem. I was just in the wrong vehicle.</p>
 
         <p class="story-p"><em>Breaking Limits Achieves Success.</em> Now I know what the limits actually were.</p>
 
         <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.4); padding-left:1.25rem; font-style:italic; color:var(--text-mid); margin-top:2rem;">
-        This is Entry 011 of The Diary &mdash; the raw, unfiltered record of building TAVARA HOLDINGS from broke to builder. If it resonates, share it with someone who needs to hear it.
+        This is Entry 011 of The Diary - the raw, unfiltered record of building TAVARA HOLDINGS from broke to builder. If it resonates, share it with someone who needs to hear it.
         </p>
 
-        <p class="story-p" style="margin-top:2rem;">If you are somewhere in the middle of your own cycle &mdash; not yet at the other side &mdash; <strong>8 CYCLES</strong> was built for that moment. A mental wellness companion that meets you where you are.<br><br><a href="https://8cycles.health" target="_blank" style="color:#E52235;">Explore 8cycles.health &rarr;</a></p>
+        <p class="story-p" style="margin-top:2rem;">If you are somewhere in the middle of your own cycle - not yet at the other side - <strong>8 CYCLES</strong> was built for that moment. A mental wellness companion that meets you where you are.<br><br><a href="https://8cycles.health" target="_blank" style="color:#E52235;">Explore 8cycles.health &rarr;</a></p>
 
       </div>
       <footer class="story-article-footer">
@@ -4711,7 +4711,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   </nav>
   <div class="story-overlay-inner">
     <div class="story-full story-full-text">
-      <div class="story-hero-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="IN &amp; OUT — The last corporate chapter" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"></div>
+      <div class="story-hero-image"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80" alt="IN &amp; OUT - The last corporate chapter" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;"></div>
       <div class="story-overlay-header">
         <div class="story-article-tag">Entry 010 &middot; July 2025 &middot; Personal</div>
         <h1 class="story-article-title">IN &amp; OUT</h1>
@@ -4719,11 +4719,11 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
       </div>
       <div class="story-article-body">
 
-        <p class="story-p">I&rsquo;ve been in the workforce for more than two decades &mdash; twenty years in the corporate world. In and out of different companies over the span of my career life. Two to three years in each organisation I worked for. Always moving. Always building. Always leaving something better than I found it.</p>
+        <p class="story-p">I&rsquo;ve been in the workforce for more than two decades - twenty years in the corporate world. In and out of different companies over the span of my career life. Two to three years in each organisation I worked for. Always moving. Always building. Always leaving something better than I found it.</p>
 
         <p class="story-p">Five years was the longest I stayed in one company. That was where I built most of my leadership and management skills. And it was one of the most memorable experiences of my life, for many reasons.</p>
 
-        <p class="story-p">At that time, my bosses opened up opportunities for me at a very young age &mdash; regional IT head, meetings with C-level leaders, driving ideas to completion, exploring untested IT concepts and solutions, being bold in making decisions. It felt like I was always thinking ahead of everyone in the management team. Not young in mindset &mdash; but ahead of the curve.</p>
+        <p class="story-p">At that time, my bosses opened up opportunities for me at a very young age - regional IT head, meetings with C-level leaders, driving ideas to completion, exploring untested IT concepts and solutions, being bold in making decisions. It felt like I was always thinking ahead of everyone in the management team. Not young in mindset - but ahead of the curve.</p>
 
         <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.5); padding-left:1.25rem; font-style:italic; color:var(--text-mid);">&ldquo;The responsibilities were not for someone with a faint heart. They were for someone strategically strong, results-driven, and seeing things differently.&rdquo;</p>
 
@@ -4739,18 +4739,18 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 
         <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.5); padding-left:1.25rem; font-style:italic; color:var(--text-mid);">&ldquo;It&rsquo;s hard to accept the reality of letting go and moving on.&rdquo;</p>
 
-        <p class="story-p">Looking back now, I realised something. My engagement across every company &mdash; always IN and OUT. Coming IN to fix things, put order in place, build high-performing teams. Then leaving OUT when everything was already in order.</p>
+        <p class="story-p">Looking back now, I realised something. My engagement across every company - always IN and OUT. Coming IN to fix things, put order in place, build high-performing teams. Then leaving OUT when everything was already in order.</p>
 
-        <p class="story-p">Leaving a legacy behind &mdash; not because of me. But because there were people who believed in me. Who bet on me.</p>
+        <p class="story-p">Leaving a legacy behind - not because of me. But because there were people who believed in me. Who bet on me.</p>
 
         <p class="story-p">That legacy didn&rsquo;t disappear when I was retrenched. It was already planted. In the teams I built. In the systems still running. In the decisions still holding.</p>
 
-        <p class="story-p">The retrenchment wasn&rsquo;t the end of the mission. It was the signal that this one was complete &mdash; and the next one was waiting.</p>
+        <p class="story-p">The retrenchment wasn&rsquo;t the end of the mission. It was the signal that this one was complete - and the next one was waiting.</p>
 
         <p class="story-p">That&rsquo;s how TAVARA HOLDINGS began. Not from a boardroom. Not from a plan. From a reorg notice, an empty desk, and the stubborn belief that the story wasn&rsquo;t over.</p>
 
         <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.4); padding-left:1.25rem; font-style:italic; color:var(--text-mid); margin-top:2rem;">
-        This is Entry 010 of The Diary &mdash; the raw, unfiltered record of building TAVARA HOLDINGS from broke to builder. If it resonates, share it with someone who needs to hear it.
+        This is Entry 010 of The Diary - the raw, unfiltered record of building TAVARA HOLDINGS from broke to builder. If it resonates, share it with someone who needs to hear it.
         </p>
 
       </div>
