@@ -3279,7 +3279,6 @@ function filterDoor(filter, clickedBtn) {
   <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#E52235,transparent 50%,#E52235);"></div>
   <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(255,255,255,0.06);"></div>
   <style>
-    .plat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
     .plat-card { display:block; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:2rem 1.75rem; text-decoration:none; transition:all 0.35s ease; }
     .plat-card:hover { border-color:rgba(229,34,53,0.5); background:rgba(255,255,255,0.08); transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.3); }
     .plat-logo { width:72px; height:72px; background:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem; padding:10px; box-shadow:0 4px 16px rgba(0,0,0,0.25); overflow:hidden; }
@@ -3289,8 +3288,14 @@ function filterDoor(filter, clickedBtn) {
     .plat-name { font-family:'Playfair Display',serif; font-size:1.4rem; color:#fff; margin-bottom:0.6rem; line-height:1.2; }
     .plat-desc { font-family:'DM Sans',sans-serif; font-size:0.86rem; color:rgba(255,255,255,0.5); line-height:1.65; margin-bottom:1.25rem; }
     .plat-url { font-family:'DM Sans',sans-serif; font-size:0.75rem; color:rgba(229,34,53,0.75); font-weight:600; }
-    @media(max-width:900px){.plat-grid{grid-template-columns:repeat(2,1fr);}}
-    @media(max-width:520px){.plat-grid{grid-template-columns:1fr;}}
+    .plat-group { margin-bottom:3.5rem; }
+    .plat-group-header { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:1px solid rgba(255,255,255,0.08); }
+    .plat-group-title { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:600; color:rgba(255,255,255,0.65); }
+    .plat-group-label { font-family:'DM Sans',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:rgba(229,34,53,0.6); }
+    .plat-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+    .plat-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    @media(max-width:900px){ .plat-grid-2,.plat-grid-3{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:520px){ .plat-grid-2,.plat-grid-3{ grid-template-columns:1fr; } }
   </style>
   <div style="max-width:1200px;margin:0 auto;">
     <div class="section-header reveal" style="text-align:center;margin-bottom:3.5rem;">
@@ -3298,93 +3303,121 @@ function filterDoor(filter, clickedBtn) {
       <h2 class="section-title" style="color:#fff;">7 Platforms Built.<br>All Live. All Philippines.</h2>
       <p style="color:rgba(255,255,255,0.5);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;font-family:'DM Sans',sans-serif;">Built and running today. Solving real problems for Filipino families, hospitals, communities, SMEs, and enterprises.</p>
     </div>
-    <div class="plat-grid">
 
-      <!-- HANAPDOK -->
-      <a href="https://hanapdok.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-1">
-        <div class="plat-logo">
-          <img src="images/logos/hanapdok-logo.png" alt="HANAPDOK">
-        </div>
-        <div class="plat-tag">Healthcare · AI</div>
-        <div class="plat-name">HANAPDOK</div>
-        <p class="plat-desc">Your family needs a doctor. HANAPDOK finds the right one — from 576,514 GPS-verified providers across 70+ countries — in seconds.</p>
-        <div class="plat-url">hanapdok.com →</div>
-      </a>
+    <!-- GROUP 1: Health & Wellbeing -->
+    <div class="plat-group reveal">
+      <div class="plat-group-header">
+        <span class="plat-group-title">Health &amp; Wellbeing</span>
+        <span class="plat-group-label">Care for the Person</span>
+      </div>
+      <div class="plat-grid-2">
 
-      <!-- AIRA -->
-      <a href="https://airagov.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-2">
-        <div class="plat-logo">
-          <img src="images/logos/aira-logo.png" alt="AIRA">
-        </div>
-        <div class="plat-tag">AI Governance · Compliance</div>
-        <div class="plat-name">AIRA</div>
-        <p class="plat-desc">Your board is asking about AI risk. AIRA gives you the answers — board-grade AI readiness across 27 jurisdictions.</p>
-        <div class="plat-url">airagov.com →</div>
-      </a>
-
-      <!-- KOMUNITI -->
-      <a href="https://komuniti.cloud" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-3">
-        <div class="plat-logo">
-          <img src="images/logos/komuniti-logo.png" alt="KOMUNITI">
-        </div>
-        <div class="plat-tag">Community · LGU</div>
-        <div class="plat-name">KOMUNITI</div>
-        <p class="plat-desc">Running an HOA, LGU, or association on group chats and spreadsheets? KOMUNITI was built to replace all of that.</p>
-        <div class="plat-url">komuniti.cloud →</div>
-      </a>
-
-      <!-- BLUEWHALE -->
-      <a href="https://bluewhaleops.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-4">
-        <div class="plat-logo">
-          <img src="images/logos/bluewhale-logo.png" alt="BLUEWHALE">
-        </div>
-        <div class="plat-tag">Operations · AI</div>
-        <div class="plat-name">BLUEWHALE</div>
-        <p class="plat-desc">Healthcare and enterprise operations are complex. BLUEWHALE runs the monitoring, compliance, and speed — so your team doesn't have to.</p>
-        <div class="plat-url">bluewhaleops.com →</div>
-      </a>
-
-      <!-- 8 CYCLES -->
-      <a href="https://8cycles.health" target="_blank" rel="noopener" class="plat-card reveal" style="transition-delay:0.5s;border-top:2px solid #E52235;">
-        <div class="plat-logo">
-          <div style="width:48px;height:48px;background:linear-gradient(135deg,#0B1730,#E52235);border-radius:12px;display:flex;align-items:center;justify-content:center;">
-            <span style="color:#fff;font-weight:800;font-size:1.1rem;font-family:'Playfair Display',serif;">8</span>
+        <!-- HANAPDOK -->
+        <a href="https://hanapdok.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-1">
+          <div class="plat-logo">
+            <img src="images/logos/hanapdok-logo.png" alt="HANAPDOK">
           </div>
-        </div>
-        <div class="plat-tag">Mental Wellness · AI</div>
-        <div class="plat-name">8 CYCLES</div>
-        <p class="plat-desc">Feeling stuck, lost, or not enough? You are not broken. You are in a cycle. AINI meets you where you are.</p>
-        <div class="plat-url">8cycles.health →</div>
-      </a>
+          <div class="plat-tag">Healthcare · AI</div>
+          <div class="plat-name">HANAPDOK</div>
+          <p class="plat-desc">Your family needs a doctor. HANAPDOK finds the right one — from 576,514 GPS-verified providers across 70+ countries — in seconds.</p>
+          <div class="plat-url">hanapdok.com →</div>
+        </a>
 
-      <!-- TAVARA ERP -->
-      <a href="https://tavaraerp.com" target="_blank" rel="noopener" class="plat-card reveal" style="transition-delay:0.6s;">
-        <div class="plat-logo">
-          <div class="plat-logo-fallback">
-            <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="32" height="24" rx="3" stroke="#E52235" stroke-width="2.5"/>
-              <path d="M4 14h32" stroke="#E52235" stroke-width="2"/>
-              <path d="M13 20h14M13 25h8" stroke="#E52235" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+        <!-- 8 CYCLES -->
+        <a href="https://8cycles.health" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-2">
+          <div class="plat-logo">
+            <img src="images/logos/8cycles-logo.png" alt="8 CYCLES">
           </div>
-        </div>
-        <div class="plat-tag">ERP · SME · BIR</div>
-        <div class="plat-name">TAVARA ERP</div>
-        <p class="plat-desc">Your SME needs payroll, BIR compliance, POS, and inventory — all in one system built for Philippine businesses.</p>
-        <div class="plat-url">tavaraerp.com →</div>
-      </a>
+          <div class="plat-tag">Mental Wellness · AI</div>
+          <div class="plat-name">8 CYCLES</div>
+          <p class="plat-desc">Feeling stuck, lost, or not enough? You are not broken. You are in a cycle. AINI meets you where you are.</p>
+          <div class="plat-url">8cycles.health →</div>
+        </a>
 
-      <!-- KONEKBID -->
-      <a href="https://konekbid.com" target="_blank" rel="noopener" class="plat-card reveal" style="transition-delay:0.7s;">
-        <div class="plat-logo" style="background:#0F1D3A;">
-          <img src="images/logos/konekbid-logo.png" alt="KONEKBID">
-        </div>
-        <div class="plat-tag">Procurement · Gov't · B2B</div>
-        <div class="plat-name">KONEKBID</div>
-        <p class="plat-desc">Philippine government bids are buried in 100-page documents. KONEKBID reads every PhilGEPS bid, scores your qualification match, and fills your submission — in minutes.</p>
-        <div class="plat-url">konekbid.com →</div>
-      </a>
+      </div>
+    </div>
 
+    <!-- GROUP 2: Operations & Enterprise -->
+    <div class="plat-group reveal">
+      <div class="plat-group-header">
+        <span class="plat-group-title">Operations &amp; Enterprise</span>
+        <span class="plat-group-label">Run and Transform the Enterprise</span>
+      </div>
+      <div class="plat-grid-3">
+
+        <!-- KOMUNITI -->
+        <a href="https://komuniti.cloud" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-1">
+          <div class="plat-logo">
+            <img src="images/logos/komuniti-logo.png" alt="KOMUNITI">
+          </div>
+          <div class="plat-tag">Community · LGU</div>
+          <div class="plat-name">KOMUNITI</div>
+          <p class="plat-desc">Running an HOA, LGU, or association on group chats and spreadsheets? KOMUNITI was built to replace all of that.</p>
+          <div class="plat-url">komuniti.cloud →</div>
+        </a>
+
+        <!-- TAVARA ERP -->
+        <a href="https://tavaraerp.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-2">
+          <div class="plat-logo">
+            <div class="plat-logo-fallback">
+              <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="8" width="32" height="24" rx="3" stroke="#E52235" stroke-width="2.5"/>
+                <path d="M4 14h32" stroke="#E52235" stroke-width="2"/>
+                <path d="M13 20h14M13 25h8" stroke="#E52235" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="plat-tag">ERP · SME · BIR</div>
+          <div class="plat-name">TAVARA ERP</div>
+          <p class="plat-desc">Your SME needs payroll, BIR compliance, POS, and inventory — all in one system built for Philippine businesses.</p>
+          <div class="plat-url">tavaraerp.com →</div>
+        </a>
+
+        <!-- KONEKBID -->
+        <a href="https://konekbid.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-3">
+          <div class="plat-logo">
+            <img src="images/logos/konekbid-logo.png" alt="KONEKBID">
+          </div>
+          <div class="plat-tag">Procurement · Gov't · B2B</div>
+          <div class="plat-name">KONEKBID</div>
+          <p class="plat-desc">Philippine government bids are buried in 100-page documents. KONEKBID reads every PhilGEPS bid, scores your qualification match, and fills your submission — in minutes.</p>
+          <div class="plat-url">konekbid.com →</div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- GROUP 3: Governance & Infrastructure -->
+    <div class="plat-group reveal">
+      <div class="plat-group-header">
+        <span class="plat-group-title">Governance &amp; Infrastructure</span>
+        <span class="plat-group-label">Secure the Rails</span>
+      </div>
+      <div class="plat-grid-2" style="max-width:800px;">
+
+        <!-- AIRA -->
+        <a href="https://airagov.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-1">
+          <div class="plat-logo">
+            <img src="images/logos/aira-logo.png" alt="AIRA">
+          </div>
+          <div class="plat-tag">AI Governance · Compliance</div>
+          <div class="plat-name">AIRA</div>
+          <p class="plat-desc">Your board is asking about AI risk. AIRA gives you the answers — board-grade AI readiness across 27 jurisdictions.</p>
+          <div class="plat-url">airagov.com →</div>
+        </a>
+
+        <!-- BLUEWHALE -->
+        <a href="https://bluewhaleops.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-2">
+          <div class="plat-logo">
+            <img src="images/logos/bluewhale-logo.png" alt="BLUEWHALE">
+          </div>
+          <div class="plat-tag">Operations · AI</div>
+          <div class="plat-name">BLUEWHALE</div>
+          <p class="plat-desc">Healthcare and enterprise operations are complex. BLUEWHALE runs the monitoring, compliance, and speed — so your team doesn't have to.</p>
+          <div class="plat-url">bluewhaleops.com →</div>
+        </a>
+
+      </div>
     </div>
 
     <div style="text-align:center;margin-top:3rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.08);">
