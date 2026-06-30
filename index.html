@@ -2778,7 +2778,7 @@ function filterDoor(filter, clickedBtn) {
     <div class="hero-dot"></div>
   </div>
   <div class="hero-content">
-    <div class="hero-tag">Eight Career Endings. None of Them My Choice.</div>
+    <div class="hero-tag" style="display:none;">Eight Career Endings. None of Them My Choice.</div>
     <h1 class="hero-title">
       <span class="line"><span class="line-inner">Breaking Limits</span></span>
       <span class="line"><span class="line-inner">Achieves <em>Success</em></span></span>
@@ -3226,7 +3226,7 @@ function filterDoor(filter, clickedBtn) {
     </div>
 
     <!-- Entry 010 -->
-    <div style="cursor:pointer" onclick="openStory('in-and-out')" class="story-card" data-category="personal">
+    <div style="display:none;" onclick="openStory('in-and-out')" class="story-card" data-category="personal">
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 010</span>
@@ -3239,7 +3239,7 @@ function filterDoor(filter, clickedBtn) {
     </div>
 
     <!-- Entry 011 - LATEST -->
-    <div style="cursor:pointer" onclick="openStory('the-driver')" class="story-card" data-category="personal" style="border-top:2px solid #E52235;">
+    <div style="display:none;" onclick="openStory('the-driver')" class="story-card" data-category="personal">
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 011</span>
@@ -4614,7 +4614,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 </script>
 
 <!-- ENTRY 011: THE DRIVER → THE MANAGER → THE DIRECTOR → THE FOUNDER -->
-<div class="story-overlay" id="story-the-driver">
+<div class="story-overlay" id="story-the-driver" style="display:none!important;">
   <nav class="story-overlay-nav">
     <button onclick="closeStory()">&larr; Back to Home</button>
   </nav>
@@ -4705,7 +4705,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 </div>
 
 <!-- ENTRY 010: IN & OUT -->
-<div class="story-overlay" id="story-in-and-out">
+<div class="story-overlay" id="story-in-and-out" style="display:none!important;">
   <nav class="story-overlay-nav">
     <button onclick="closeStory()">&larr; Back to Home</button>
   </nav>
